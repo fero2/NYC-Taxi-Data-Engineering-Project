@@ -70,9 +70,7 @@ Created interactive dashboards and heatmap visualizations to present insights on
 *Note: The entire pipeline can be built in one of the Azure services itself; but different services have been used here just to demonstrate, get an understanding and hands-on experience with popular Azure products*.
 
 ### Power BI Dashboard:
-
-
-
+![Power BI analysis dashboard](https://github.com/fero2/NYC-Taxi-Data-Engineering-Project/blob/main/Power%20BI%20Dashboard.png)
 
 
 ## Summary
