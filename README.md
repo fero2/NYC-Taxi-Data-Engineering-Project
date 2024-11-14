@@ -42,21 +42,21 @@ Orchestrated the entire ETL process, automating the data ingestion from external
 Served as the primary storage layer for the raw and transformed data. Data is ingested here initially and subsequently processed by other services.
 
 ### 3. Azure Databricks:
-Performed data cleaning and transformation in PySpark. Databricks processed large datasets efficiently with the single node cluster itself, transforming raw trip data into insights-ready formats.
+Performed data cleaning and transformation in PySpark. Tuned the query and did performance improvements using cache and broadcast join methods allowing databricks to process large datasets efficiently with the single node cluster itself, transforming raw trip data into meaningful insights-ready formats.
 
 ### 4. Azure Synapse Analytics: 
 Acted as the data warehouse for the processed data, enabling efficient querying and storage of structured datasets. The data in Synapse was further utilized to build analytical views for reporting.
 
 ### 5. Key Vault for Secure Secret Management:
-Stored sensitive information such as ADLS access keys in Azure Key Vault to ensure secure access across the project. This setup reduced hard-coded secrets in code and centralized secret management, enhancing security.
+Stored sensitive information in Azure Key Vault to ensure secure access across the project. This setup reduced hard-coded secrets in code and centralized secret management, enhancing security.
 Configured a Key Vault-backed secret scope in Databricks, enabling secure, managed access to ADLS Gen2 directly from the Databricks environment for seamless data processing and transformations.
 
 ### 6. Azure Active Directory:
-By integrating AAD and enabling role-based access control (RBAC), we maintained a centralized identity management system, enhancing security and simplifying permissions across the project, ensuring that only authorized users and services could access resources like ADLS, Databricks, and Synapse Analytics. 
+By integrating AAD and enabling role-based access control (RBAC), we maintained a centralized identity management system, enhancing security and simplifying permissions across the project ensuring that only authorized users and services could access resources like ADLS, Databricks, and Synapse Analytics. 
 - For example, granted the Storage Blob Data Contributor role to Databricks for ADLS Gen2 to allow read and write access.
 
 ### 7. Power BI:
-Created interactive dashboards and heatmap visualizations to present insights on key metrics, such as trip distances, fare amounts, passenger counts, and pickup and drop-off patterns across New York City.
+Created interactive dashboards and heatmap visualizations to present simple insights on key metrics such as trip density, total revenue, average tip amount by passenger count across New York City.
 
 
 ### Data Model:
